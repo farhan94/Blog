@@ -18,6 +18,14 @@
 		    background-color: #1abc9c; /* Green */
 		    color: #ffffff;
 		}
+		.bg-2 { 
+    		background-color: #474e5d; /* Dark Blue */
+    		color: #ffffff;
+		}
+		.btn-space {
+   			 margin-left: 5px;
+		}
+
 	</style>
 	<style type="text/css">
 		<!--
@@ -26,30 +34,33 @@
 	</style>
 </head>
  <header>
-   <div class="container-fluid bg-1 text-center">
-	<h1 class="text-center">Blog</h1>
- 	<img src="/Images/IMG_0586.JPG" height="200" alt="Texas">
- 	<h2 class="text-center"><small>A blogging website by Farhan Ali and Karim Sayani</small></h2>
+ 	<div class="container-fluid bg-2 text-right" style="padding-top:10px; padding-bottom:10px;">
+ 		<button type="button" class="btn btn-default btn-sm btn-space">About</button> 		
+ 		<%
+	    	UserService userService = UserServiceFactory.getUserService();
+	    	User user = userService.getCurrentUser();
+	    	if (user != null) {
+	      		pageContext.setAttribute("user", user);
+		%>
+			<!-- <h5 class="side" style="padding-left:10px;">Hello, ${fn:escapeXml(user.nickname)}! (You can -->
+			<a href="<%= userService.createLogoutURL(request.getRequestURI()) %>" class="btn btn-default btn-sm btn-space">Sign out</a>
+			<!--  </h5> -->
+		<%
+    		} else {
+		%>
+			<a href="<%= userService.createLoginURL(request.getRequestURI()) %>" class="btn btn-default btn-sm btn-space">Sign in</a>
+		<%
+    		}
+		%>
+	</div>
+   	<div class="container-fluid bg-1 text-center">
+		<h1>Blog</h1>
+ 		<img src="/Images/IMG_0586.JPG" height="200" alt="Texas">
+ 		<h2 class="text-center"><small>A blogging website by Farhan Ali and Karim Sayani</small></h2>
   </div>
  </header>
   <body>
-<%
-    UserService userService = UserServiceFactory.getUserService();
-    User user = userService.getCurrentUser();
-    if (user != null) {
-      pageContext.setAttribute("user", user);
-%>
-<p>Hello, ${fn:escapeXml(user.nickname)}! (You can
-<a href="<%= userService.createLogoutURL(request.getRequestURI()) %>">sign out</a>.)</p>
-<%
-    } else {
-%>
-<p>Hello!
-<a href="<%= userService.createLoginURL(request.getRequestURI()) %>">Sign in</a>
-to include your name with greetings you post.</p>
-<%
-    }
-%>
+
 
 
   </body>
