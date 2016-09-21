@@ -1,0 +1,39 @@
+.bg-1 { 
+    background-color: #474e5d; /* Green */
+    color: #ffffff;
+}
+.bg-2 { 
+    background-color: #1abc9c; /* Dark Blue */
+	color: #ffffff;
+}
+.bg-3 { 
+   	background-color: #f2e6d9; /* light Brown */
+	color: #666666;
+}
+.btn-space {
+   	 margin-left: 5px;
+	}
+	
+.container-fluid {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.navbar {
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+	font-size: 15px;
+}
+.navbar-nav li a:hover {
+   color: #1abc9c;
+}
+body {
+   	background-color: #f2e6d9; /* light Brown */
+	color: #666666;
+    line-height: 1.8;
+}
+p{
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 20px;
+}

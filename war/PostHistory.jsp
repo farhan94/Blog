@@ -49,23 +49,11 @@
   </div>
 </nav>
 
-
-	<div class="container-fluid bg-1 text-center">
- 		 <div class="row">
-    <div class="col-sm-4">
-      <img src="Images/pen-blog.jpg" class="img-circle" height="200" width= "200" alt="Image1">
+<div class="container-fluid bg-1 text-center">
+<h1><strong>All Blogs</strong></h1>
     </div>
-    <div class="col-sm-4 centerBlock" >
-			<h1><strong>The Blog</strong></h1>
-			<h3 class="text-center" style="color:#d9d9d9">A blogging website by Farhan Ali and Karim Sayani</h3>
-    </div>
-    <div class="col-sm-4"> 
-      <img src="Images/letter-blog.jpg" class="img-circle" height="200" width="200" alt="Image3">
-    </div>
-  </div>
-  </div> 
-</header>
-  <body >
+    </header>
+  <body>
 	<%
 	ObjectifyService.register(Blog.class);
 	List<Blog> blogs = ObjectifyService.ofy().load().type(Blog.class).list();
@@ -76,7 +64,7 @@
         <p class="text-center">No blogs to display! :(</p>
         <%
     } else{
-    	for(int i = 0; i<4 && i < blogs.size(); i++){
+    	for(int i = 0; i < blogs.size(); i++){
     		 pageContext.setAttribute("blog_content", blogs.get(i).getContent());
     		 pageContext.setAttribute("blog_title", blogs.get(i).getTitle());
     		 pageContext.setAttribute("blog_user", blogs.get(i).getUser().getNickname());
