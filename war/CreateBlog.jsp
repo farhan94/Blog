@@ -50,6 +50,7 @@
     <label class="control-label col-sm-2" for="content">Blog:</label>
     <textarea name="content" rows="6" cols="120"  required></textarea></div>
    <button type="submit" class="btn btn-default">Post Blog</button>
+   <input type="button" name="cancel" value="Cancel" class="btn btn-default" onclick="window.location='/Blog.jsp'" />
  </form>
 
 </body>

@@ -6,6 +6,14 @@
 	 background-image: url("bg.jpg");
     background-color: #474e5d;
     color: #ffffff;
+     font-family:  'Hoefler Text', Georgia, 'Times New Roman', serif;
+ font-weight: normal;
+        font-size: 2.00em;
+ letter-spacing: .2em;
+ line-height: 1.1em;
+ margin:0px;
+ text-align: center;
+ text-transform: uppercase;
 }
 .bg-2 { 
     background-color: #99ccff; /* Dark Blue */
@@ -35,11 +43,19 @@
 body {
 	background-image: url("blurred-background-7.jpg");
    	background-color: #e6e6e6; /* light Brown */
-	color: #666666;
     line-height: 1.8;
 }
 p{
 	padding-left: 20px;
 	padding-right: 20px;
 	font-size: 20px;
+}
+h2{
+	font-family:  'Hoefler Text', Georgia, 'Times New Roman', serif;
+	font-weight: normal;
+ letter-spacing: .2em;
+ color: #000000;
+ line-height: 1.1em;
+ margin:0px;
+ text-transform: uppercase;
 }

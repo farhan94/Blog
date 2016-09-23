@@ -57,7 +57,7 @@
     </div>
     <div class="col-sm-4 centerBlock" >
 			<h1><strong>The Blog</strong></h1>
-			<h3 class="text-center" style="color:#d9d9d9">A blogging website by Farhan Ali and Karim Sayani</h3>
+			<h4 class="text-center" style="color:#d9d9d9">A blogging website by Farhan Ali and Karim Sayani</h4>
     </div>
     <div class="col-sm-4"> 
       <img src="Images/letter-blog.jpg" class="img-circle" height="200" width="200" alt="Image3">
