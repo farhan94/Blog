@@ -2,12 +2,17 @@
     background-color: #474e5d; /* Green */
     color: #ffffff;
 }
+.bg-1a{
+	 background-image: url("bg.jpg");
+    background-color: #474e5d;
+    color: #ffffff;
+}
 .bg-2 { 
-    background-color: #1abc9c; /* Dark Blue */
+    background-color: #99ccff; /* Dark Blue */
 	color: #ffffff;
 }
 .bg-3 { 
-   	background-color: #f2e6d9; /* light Brown */
+   	background-color: #d9d9d9; /* light Brown */ 
 	color: #666666;
 }
 .btn-space {
@@ -28,7 +33,8 @@
    color: #1abc9c;
 }
 body {
-   	background-color: #f2e6d9; /* light Brown */
+	background-image: url("blurred-background-7.jpg");
+   	background-color: #e6e6e6; /* light Brown */
 	color: #666666;
     line-height: 1.8;
 }

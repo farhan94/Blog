@@ -50,7 +50,7 @@
 </nav>
 
 
-	<div class="container-fluid bg-1 text-center">
+	<div class="container-fluid bg-1a text-center">
  		 <div class="row">
     <div class="col-sm-4">
       <img src="Images/pen-blog.jpg" class="img-circle" height="200" width= "200" alt="Image1">
@@ -65,7 +65,11 @@
   </div>
   </div> 
 </header>
-  <body >
+  <body>
+  <br>
+  <div class="col-sm-2">
+   </div>
+   <div class="container-fluid col-sm-8 bg-3">
 	<%
 	ObjectifyService.register(Blog.class);
 	List<Blog> blogs = ObjectifyService.ofy().load().type(Blog.class).list();
@@ -82,14 +86,17 @@
     		 pageContext.setAttribute("blog_user", blogs.get(i).getUser().getNickname());
     		 pageContext.setAttribute("blog_date", blogs.get(i).getDateAsString());
     		%>
-    		<p>
+    		<p class="text-center">
     		<h2>${fn:escapeXml(blog_title)}</h2>
-    		<h4>Submitted by ${fn:escapeXml(blog_user)}  <small> on ${fn:escapeXml(blog_date)}</small></h4>
+    		<h4><span class="glyphicon glyphicon-time"></span> Submitted by ${fn:escapeXml(blog_user)}  <small> on ${fn:escapeXml(blog_date)}</small></h4>
+    		 <hr>
     		 <blockquote>${fn:escapeXml(blog_content)}</blockquote></p>
     		 <hr>
+    		
 <%    	}
-    }
+    	}
         %>
-        
+        </div>
+        <div class="col-sm-2"> </div>
   </body>
 </html>
