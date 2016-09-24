@@ -24,14 +24,15 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
     <ul class="nav navbar-nav navbar-right">
-        <li><a  href="/PostHistory.jsp"><span class="glyphicon glyphicon-list"></span> All Posts</a>
-     <li><a  href="/Subscribe2.jsp"><span class="glyphicon glyphicon-envelope"></span> Subscribe</a>
+        <li><a  href="/PostHistory.jsp"><span class="glyphicon glyphicon-list"></span> All Posts</a></li>
+
 		<%
 	    	UserService userService = UserServiceFactory.getUserService();
 	    	User user = userService.getCurrentUser();
 	    	if (user != null) {
 	      		pageContext.setAttribute("user", user);
 		%>
+		<li><a href="/CreateBlog.jsp"><span class="glyphicon glyphicon-pencil"></span> New Blog</a></li>
       <li><a href="<%= userService.createLogoutURL(request.getRequestURI()) %>"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
     </ul>
     </div>
@@ -41,20 +42,26 @@
 <body>
 <div class="container">
 <br>
- <h2>Compose a New Blog</h2>
+ <h2>Subscribe or Unsubscribe</h2>
  <br>
- <form action="/post" method="post">
+ <form action="/subscribe" method="post">
  	<div class="form-group">
-    <label class="control-label col-sm-2" for="title">Title:</label>
-    <textarea name="title" rows="1" cols="120"  required></textarea>
-  </div>
-   	<div class="form-group">
-    <label class="control-label col-sm-2" for="content">Blog:</label>
-    <textarea name="content" rows="6" cols="120"  required></textarea></div>
-   <button type="submit" class="btn btn-default">Post Blog</button>
-   <input type="button" name="cancel" value="Cancel" class="btn btn-default" onclick="window.location='/Blog.jsp'" />
+    <label class="control-label col-sm-4" for="Email Address">Subscribe Email Address:</label>
+    <textarea name="Email Address" rows="1" cols="120"  required></textarea>
+</div>
+   <button type="submit" name="Subscribe" class="btn btn-default"> Subscribe</button>
  </form>
-
+   </form>
+   <br>
+   <br>
+ <form action="/unsubscribe" method="post">
+ 	<div class="form-group">
+    <label class="control-label col-sm-4" for="Email Address">Unsubscribe Email Address:</label>
+    <textarea name="Email Address" rows="1" cols="120"  required></textarea>
+</div>
+   <button type="submit" name="Subscribe" class="btn btn-default"> Unsubscribe</button>
+   </form>
+   </div>
 </body>
  <%
     		} else {
@@ -67,8 +74,27 @@
 </header>
 <body>
 <div class="container">
- <h2 class="text-center">Oops! You shouldn't be here! Log in to see this page! :)</h2>
- </body>
+<br>
+ <h2>Subscribe or Unsubscribe</h2>
+ <br>
+ <form action="/subscribe" method="post">
+ 	<div class="form-group">
+    <label class="control-label col-sm-4" for="Email Address">Subscribe Email Address:</label>
+    <textarea name="Email Address" rows="1" cols="120"  required></textarea>
+</div>
+   <button type="submit" name="Subscribe" class="btn btn-default"> Subscribe</button>
+   </form>
+   <br>
+   <br>
+ <form action="/unsubscribe" method="post">
+ 	<div class="form-group">
+    <label class="control-label col-sm-4" for="Email Address">Unsubscribe Email Address:</label>
+    <textarea name="Email Address" rows="1" cols="120"  required></textarea>
+</div>
+   <button type="submit" name="Subscribe" class="btn btn-default"> Unsubscribe</button>
+   </form>
+</div>
+</body>
  
       <%
     		}

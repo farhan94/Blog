@@ -32,6 +32,12 @@ public class Blog implements Comparable<Blog> {
     public String getDateAsString(){
     	return date.toString();
     }
+    public Date getDate(){
+    	return date;
+    }
+    public String getCompleteBlogAsString(){
+    	return "<p> The post titled <strong> " + this.title + " </strong> was made on " + this.getDateAsString() + "<br> by: " + this.user + "<br> <br>" + this.content + " <br></p>";
+    }
     @Override
     public int compareTo(Blog other) {
         if (date.after(other.date)) {

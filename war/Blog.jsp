@@ -28,7 +28,7 @@
     <div class="collapse navbar-collapse" id="myNavbar">
     <ul class="nav navbar-nav navbar-right">
         <li><a  href="/PostHistory.jsp"><span class="glyphicon glyphicon-list"></span> All Posts</a>
-    <li><a  href="/Blog.jsp"><span class="glyphicon glyphicon-envelope"></span> Subscribe</a>
+    <li><a  href="/Subscribe2.jsp"><span class="glyphicon glyphicon-envelope"></span> Subscribe</a>
 		<%
 	    	UserService userService = UserServiceFactory.getUserService();
 	    	User user = userService.getCurrentUser();
